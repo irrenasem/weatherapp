@@ -3,10 +3,10 @@ name: Python Application CI/CD
 on:
   push:
     branches:
-      - weatherapp
+      - main
   pull_request:
     branches:
-      - weatherapp
+      - main
 
 jobs:
   test:
