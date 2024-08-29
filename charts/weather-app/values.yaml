@@ -1,0 +1,15 @@
+image:
+  repository: irrenasem/weather-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  annotations: {}
+  hosts:
+    - host: weather-app.local
+      paths: ["/"]
