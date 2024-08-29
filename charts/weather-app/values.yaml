@@ -6,10 +6,3 @@ image:
 service:
   type: ClusterIP
   port: 80
-
-ingress:
-  enabled: true
-  annotations: {}
-  hosts:
-    - host: weather-app.local
-      paths: ["/"]

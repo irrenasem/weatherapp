@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-deployment
+  name: weather-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .Release.Name }}
+      app: weather-app
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}
+        app: weather-app
     spec:
       containers:
-        - name: {{ .Release.Name }}
+        - name: weather-app
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: 80
