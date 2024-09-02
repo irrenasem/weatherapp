@@ -23,7 +23,7 @@ api_key = os.getenv('API_TOKEN')
 if __name__ == "__main__":
 
     if len(sys.argv) < 2:
-        print("Usage: python main.py <city_name> [<future_date>]")
+        print("Usage: python weather_app.py <city_name> [<future_date>]")
         sys.exit(1)
 
     city_name = sys.argv[1]
