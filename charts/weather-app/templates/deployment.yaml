@@ -20,8 +20,5 @@ spec:
           args: ["weather_app.py", "{{ .Values.weatherApp.cityName }}", "{{ .Values.weatherApp.futureDate}}"]
           env:
           - name: API_TOKEN
-            valueFrom:
-              secretKeyRef:
-                name: "{{ .Values.weatherApp.apiToken }}"
-                key: apiToken
+              value: "{{ .Values.weatherApp.apiToken }}"
 
