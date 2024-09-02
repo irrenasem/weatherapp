@@ -13,7 +13,6 @@ spec:
         app: weather-app
     spec:
       containers:
-        - name: weather-app
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          ports:
-            - containerPort: 80
+      - name: weather-app
+        image: irrenasem/weatherapp:latest
+        args: ["<city_name>", "<future_date>"]
