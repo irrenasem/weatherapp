@@ -1,4 +1,4 @@
-containers:
-- name: weather-app
-  image: "irrenasem/weatherapp:latest"
-  args: ["<city_name>", "<future_date>"]
+name: weather-app
+image: "irrenasem/weatherapp:latest"
+city_name: "ashdod"
+future_date: "2024-09-20"
