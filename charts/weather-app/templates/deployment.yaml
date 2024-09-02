@@ -19,6 +19,5 @@ spec:
           command: ["python"]
           args: ["weather_app.py", "{{ .Values.weatherApp.cityName }}", "{{ .Values.weatherApp.futureDate}}"]
           env:
-          - name: API_TOKEN
+            - name: API_TOKEN
               value: "{{ .Values.weatherApp.apiToken }}"
-
