@@ -17,7 +17,7 @@ spec:
         - name: weather-app
           image: "irrenasem/weatherapp:latest"
           command: ["python"]
-          args: ["weather_app.py", "{{ .Values.weatherApp.city_name }}", "{{ .Values.weatherApp.future_date }}"]
+          args: ["weather_app.py", "{{ .Values.weatherApp.cityName }}", "{{ .Values.weatherApp.futureDate}}"]
           env:
           - name: API_TOKEN
             valueFrom:
