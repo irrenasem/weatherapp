@@ -1,3 +1,4 @@
+# templates/deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -13,8 +14,9 @@ spec:
         app: weather-app
     spec:
       containers:
-      - name: weather-app
-        image: irrenasem/weatherapp:latest
-        command: ["python", "weather_app.py"]
-        args: ["<city_name>", "<future_date>"]
+        - name: weather-app
+          image: "irrenasem/weatherapp:latest"
+          command: ["python"]
+          args: ["weather_app.py", "{{ .Values.weatherApp.cityName }}", "{{ .Values.weatherApp.futureDate }}"]
+
 
