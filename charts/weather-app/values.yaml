@@ -2,3 +2,4 @@ name: weather-app
 image: "irrenasem/weatherapp:latest"
 city_name: "ashdod"
 future_date: "2024-09-20"
+apiToken: "aad50edd35ed4d579c995156242408"
