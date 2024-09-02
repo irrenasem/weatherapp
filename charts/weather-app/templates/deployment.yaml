@@ -17,11 +17,11 @@ spec:
         - name: weather-app
           image: "irrenasem/weatherapp:latest"
           command: ["python"]
-          args: ["weather_app.py", "{{ .Values.weatherApp.city_name }}", "{{ .Values.weatherApp.future_date }}"]
+          args: ["weather_app.py", "{{ .Values.weather-app.city_name }}", "{{ .Values.weather-app.future_date }}"]
           env:
           - name: API_TOKEN
             valueFrom:
               secretKeyRef:
-                name: "{{ .Values.weatherApp.apiToken }}"
+                name: "{{ .Values.weather-app.apiToken }}"
                 key: apiToken
 
