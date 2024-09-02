@@ -1,8 +1,4 @@
-image:
-  repository: irrenasem/weatherapp
-  tag: latest
-  pullPolicy: IfNotPresent
-
-service:
-  type: ClusterIP
-  port: 80
+containers:
+- name: weather-app
+  image: "irrenasem/weatherapp:latest"
+  args: ["<city_name>", "<future_date>"]
