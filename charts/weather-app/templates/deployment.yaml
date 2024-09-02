@@ -15,4 +15,6 @@ spec:
       containers:
       - name: weather-app
         image: irrenasem/weatherapp:latest
+        command: ["python", "weather_app.py"]
         args: ["<city_name>", "<future_date>"]
+
