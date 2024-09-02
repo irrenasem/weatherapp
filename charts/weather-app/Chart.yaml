@@ -1,5 +1,4 @@
-containers:
-- name: weather-app
-  image: "irrenasem/weatherapp:latest"
-  command: ["python"]
-  args: ["weather_app.py", "<city_name>", "<future_date>"]
+apiVersion: v2
+name: weather-app
+description: A Helm chart for deploying a weather app
+version: 0.1.0
