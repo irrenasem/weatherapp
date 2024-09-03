@@ -20,10 +20,20 @@ This Python application fetches the current weather and the forecast for a futur
 ## Setup and Installation
 
 ### Clone the Repository
-
 ```bash
 git clone https://github.com/irrenasem/weatherapp.git
 cd weather-app
+```
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+### Run the Application Locally
+```bash
+python weather_app.py
+```
+###
+Dockerize the Application
 
 ### Deployment:
 
