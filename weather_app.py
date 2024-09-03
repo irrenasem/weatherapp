@@ -24,7 +24,6 @@ if __name__ == "__main__":
 
     if len(sys.argv) < 2:
         print("Usage: python weather_app.py <city_name> [<future_date>]")
-        sys.exit(1)
 
     city_name = sys.argv[1]
     
@@ -34,10 +33,10 @@ if __name__ == "__main__":
             future_date = datetime.strptime(future_date_str, "%Y-%m-%d").date()
             if future_date <= datetime.today().date():
                 print("Error: The date must be in the future.")
-                sys.exit(1)
+
         except ValueError:
             print("Error: Invalid date format. Please use YYYY-MM-DD.")
-            sys.exit(1)
+
     else:
         future_date = None
 
