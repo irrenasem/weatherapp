@@ -21,7 +21,7 @@ This Python application fetches the current weather and the forecast for a futur
 
 ### Clone the Repository
 
-
+```bash
 git clone https://github.com/irrenasem/weatherapp.git
 cd weather-app
 
