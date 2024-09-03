@@ -33,13 +33,21 @@ pip install -r requirements.txt
 python weather_app.py
 ```
 ###
-Dockerize the Application
-
-### Deployment:
-
-You can pull the Docker image from Docker Hub:
-docker pull irrenasem/weatherapp
-
-**Kubernetes Deployment with Helm:**
+Kubernetes Deployment with Helm
+ Package the Helm chart:
+ ```bash
+helm package charts/weather-app
+```
+Deploy to Kubernetes:
+```bash
+    helm install weather-app ./weather-app-0.1.0.tgz
+```
+Continuous Deployment with Argo CD
+```bash
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl apply -f weatherapp/argo-app.yaml
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+```
 
 
