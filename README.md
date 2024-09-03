@@ -25,7 +25,7 @@ This Python application fetches the current weather and the forecast for a futur
 git clone https://github.com/irrenasem/weatherapp.git
 cd weather-app
 
-**Deployment:**
+### Deployment:
 
 You can pull the Docker image from Docker Hub:
 docker pull irrenasem/weatherapp
